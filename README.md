@@ -1,2 +1,2 @@
 # GrowingSDK-iOS-GrowingCoreKit
-GrowingSDK-iOS-GrowingCoreKit
+In development.
