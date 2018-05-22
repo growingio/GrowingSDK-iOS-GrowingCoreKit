@@ -35,22 +35,24 @@ THE SOFTWARE.
   s.platform     = :ios
   s.ios.deployment_target = "7.0"
 
-  s.source       = { :git => 'https://github.com/growingio/GrowingSDK-iOS-GrowingCoreKit.git', :branch => 'develop', :tag => 'test_v_0.1'}
-  s.source_files = "GrowingCoreKit/*.{framework,txt}"
-  s.source_files = "GrowingCoreKit/VERSION"
+  s.source       = { :git => 'https://github.com/growingio/GrowingSDK-iOS-GrowingCoreKit.git', :branch => 'develop'}
   s.requires_arc = true
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.dependency 'GrowingPublicHeader', '~> 2.4.0'
-
+  s.static_framework = true
   s.default_subspec = 'Core'
 
   s.subspec 'Core' do |core|
     core.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation', 'AdSupport'
     core.libraries = 'icucore', 'sqlite3'
+    s.vendored_frameworks = 'GrowingCoreKit/*.framework'
   end
 
   s.subspec 'without-IDFA' do |idfa|
     idfa.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation'
     idfa.libraries = 'icucore', 'sqlite3'
+    idfa.vendored_frameworks = 'GrowingCoreKit/*.framework'
+
   end
   
 end
