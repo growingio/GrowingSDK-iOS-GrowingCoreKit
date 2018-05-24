@@ -70,6 +70,14 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 //  1. setDeviceIDModeToCustomBlock:^NSString*{ return [[[UIDevice currentDevice] identifierForVendor] UUIDString]; }
 + (void)setDeviceIDModeToCustomBlock:(NSString*(^)(void))customBlock;
 
+/**
+ deeplink广告落地页参数回调设置
+
+ @param handler: deeplink广告落地页参数回调, params 为解析正确时反回调的参数, error 为解析错误时返回的参数.
+                 handler 默认为空, 客户需要手动设置.
+ */
++ (void)registerDeeplinkHandler:(void(^)(NSDictionary *params, NSError *error))handler;
+
 // 该函数请在main函数第一行调用 APP启动后 将不允许修改采集模式
 + (void)setAspectMode:(GrowingAspectMode)aspectMode;
 + (GrowingAspectMode)getAspectMode;
@@ -77,7 +85,7 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 // 是否允许发送基本性能诊断信息，默认为开
 + (void)setEnableDiagnose:(BOOL)enable;
 
-// 全局_不_发送任何统计信息
+// 全局不发送统计信息
 + (void)disable;
 
 // 设置发送数据的时间间隔（单位为秒）
@@ -106,8 +114,16 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 // 设置zone信息
 + (void)setZone:(NSString *)zone;
 
+// 设置 GDPR 生效
++ (void)disableDataCollect;
+// 设置 GDPR 失效
++ (void)enableDataCollect;
 
+// 获取当前设备id
 + (NSString *)getDeviceId;
+// 获取当前uid
++ (NSString *)getVisitUserId;
+// 获取当前访问id
 + (NSString *)getSessionId;
 
 
