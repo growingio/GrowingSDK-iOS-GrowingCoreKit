@@ -40,19 +40,9 @@ THE SOFTWARE.
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.static_framework = true
   s.preserve_paths = 'GrowingCoreKit/ReleaseNote.txt', 'GrowingCoreKit/VERSION'
-  s.default_subspec = 'with-IDFA'
   s.dependency 'Growing', '~> 2.4.0'
-  s.subspec 'with-IDFA' do |idfa|
-    idfa.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation', 'AdSupport'
-    idfa.libraries = 'icucore', 'sqlite3'
-    idfa.vendored_frameworks = 'GrowingCoreKit/*.framework'
-  end
-
-  s.subspec 'without-IDFA' do |t|
-    t.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation'
-    t.libraries = 'icucore', 'sqlite3'
-    t.vendored_frameworks = 'GrowingCoreKit/*.framework'
-
-  end
+  s.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation'
+  s.libraries = 'icucore', 'sqlite3'
+  s.vendored_frameworks = 'GrowingCoreKit/*.framework'
   
 end
