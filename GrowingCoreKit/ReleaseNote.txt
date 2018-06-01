@@ -1,8 +1,6 @@
-1.4.2 Release Note
-
-修复问题:
-1. PI-216, WKWebview 部分场景下加载 Hybrid JS SDK 失败的问题;
-2. PI-730, 优化数据库批量操作;
-3. PI-823, 开发证书变更的情况导致访问量异常的问题;
-4. PI-839, 获取 UIView accessibilityLabel 属性在特定机型下 crash 的问题;
-5. PI-1441, clck 事件小概率关联不到对应 page 的问题.
+1.4.2 release note： 
+  
+•  对部分场景下Hybrid JS SDK加载失败而无法对H5页面进行数据采集、圈选的情况提供可手动调用的接口
+•  优化客户端数据库的批量操作，解决小部分机型出现crash的情况
+•  优化因开发证书变更导致keychain数据无法获取的问题
+•  优化小部分clck事件无法找到对应page的问题
