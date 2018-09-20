@@ -44,23 +44,21 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 
 // 请在applicationDidFinishLaunching中调用此函数初始化
 
-// TODO: 需要告诉客户如何获取 appId
 // TODO: 要不要把 accountId 改成 projectId？
 // TODO: 这里的任何改动，都需要改 help 文档和集成文档
 
 // 如果需要采样 设置一个采样值   0.01即1% 0.001即1‰  最多支持小数点后5位
-+ (void)startWithAccountId:(NSString *)accountId withAppId:(NSString *)appId withSampling:(CGFloat)sampling;
-
 + (void)startWithAccountId:(NSString *)accountId withSampling:(CGFloat)sampling;
 
 // 默认采样100%
-+ (void)startWithAccountId:(NSString *)accountId withAppId:(NSString *)appId;
-
 + (void)startWithAccountId:(NSString *)accountId;
 
 // 命令行输出调试日志
 + (void)setEnableLog:(BOOL)enableLog;
 + (BOOL)getEnableLog;
+
+// 若使用加密功能,请在UI元素初始化之前设置此函数
++ (void)setEncryptStringBlock:(NSString *(^)(NSString *string))block;
 
 // 以下函数设置后会覆盖原有设置
 // 并且只会在第一次安装后调用 以保证同一设备的设备ID相同
@@ -77,7 +75,6 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
                  handler 默认为空, 客户需要手动设置.
  */
 + (void)registerDeeplinkHandler:(void(^)(NSDictionary *params, NSError *error))handler;
-
 // 该函数请在main函数第一行调用 APP启动后 将不允许修改采集模式
 + (void)setAspectMode:(GrowingAspectMode)aspectMode;
 + (GrowingAspectMode)getAspectMode;
@@ -118,7 +115,6 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 + (void)disableDataCollect;
 // 设置 GDPR 失效
 + (void)enableDataCollect;
-
 // 获取当前设备id
 + (NSString *)getDeviceId;
 // 获取当前uid
@@ -212,5 +208,12 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
  @param variable : 事件变量, 变量不能为nil
  */
 + (void)track:(NSString *)eventId withVariable:(NSDictionary<NSString *, id> *)variable;
+
+/**
+ 访问用户变量
+ 
+ @param variable : 访问用户变量, 不能为nil
+ */
++ (void)setVisitor:(NSDictionary<NSString *, NSObject *> *)variable;
 
 @end

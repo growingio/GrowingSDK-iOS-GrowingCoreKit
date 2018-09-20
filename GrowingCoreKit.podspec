@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "GrowingCoreKit"
-  s.version      = "2.4.0"
+  s.version      = "2.5.6"
   s.summary      = "GrowingIO-SDK-GrowingCoreKit"
 
   s.description  = <<-DESC
@@ -35,12 +35,12 @@ THE SOFTWARE.
   s.platform     = :ios
   s.ios.deployment_target = "7.0"
 
-  s.source       = { :git => 'https://github.com/growingio/GrowingSDK-iOS-GrowingCoreKit.git', :branch => 'develop'}
+  s.source       = { :git => 'https://github.com/growingio/GrowingSDK-iOS-GrowingCoreKit.git', :tag => s.version}
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.static_framework = true
   s.preserve_paths = 'GrowingCoreKit/ReleaseNote.txt', 'GrowingCoreKit/VERSION'
-  s.dependency 'Growing', '~> 2.4.0'
+  s.dependency 'Growing', '~> 2.5.6'
   s.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation'
   s.libraries = 'icucore', 'sqlite3'
   s.vendored_frameworks = 'GrowingCoreKit/*.framework'
