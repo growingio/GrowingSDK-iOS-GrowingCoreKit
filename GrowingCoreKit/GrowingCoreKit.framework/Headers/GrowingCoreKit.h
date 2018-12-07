@@ -60,6 +60,11 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 // 若使用加密功能,请在UI元素初始化之前设置此函数
 + (void)setEncryptStringBlock:(NSString *(^)(NSString *string))block;
 
+// 禁止采集push点击
++ (void)disablePushTrack:(BOOL)disable;
++ (BOOL)getDisablePushTrack;
+
+
 // 以下函数设置后会覆盖原有设置
 // 并且只会在第一次安装后调用 以保证同一设备的设备ID相同
 // 请在方法 startWithAccountId 之前调用
