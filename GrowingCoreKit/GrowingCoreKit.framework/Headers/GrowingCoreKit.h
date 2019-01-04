@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
     // 如果用于取得XIB或者其他资源 可能会失效
     GrowingAspectModeSubClass           ,
     
-    // 测试阶段 高兼容性 性能比GrowingAspectTypeSubClass略低 但是比RAC和Aspects快8-10倍左右
+    //高兼容性 性能比GrowingAspectTypeSubClass略低 但是比RAC和Aspects快8-10倍左右
     GrowingAspectModeDynamicSwizzling   ,
 };
 
@@ -80,6 +80,14 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
                  handler 默认为空, 客户需要手动设置.
  */
 + (void)registerDeeplinkHandler:(void(^)(NSDictionary *params, NSError *error))handler;
+
+/**
+  + 注册实时发送数据的回调
+  +
+  + @param handler 实时发送数据的回调, eventObject以字典的形式返回采集的事件
+  + */
++ (void)registerRealtimeReportHandler:(void(^)(NSDictionary *eventObject))handler;
+
 // 该函数请在main函数第一行调用 APP启动后 将不允许修改采集模式
 + (void)setAspectMode:(GrowingAspectMode)aspectMode;
 + (GrowingAspectMode)getAspectMode;
