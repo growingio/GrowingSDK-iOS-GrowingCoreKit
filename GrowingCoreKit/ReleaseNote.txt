@@ -1,3 +1,6 @@
+2.7.8 release note
+1.修复mobiledebugger可能出现数据少显示的问题
+
 2.7.7 release note
 1.修复地理位置相关的多线程问题
 2.修复访问用户ID可能为0的问题

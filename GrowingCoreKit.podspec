@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "GrowingCoreKit"
-  s.version      = "2.7.7"
+  s.version      = "2.7.8"
   s.summary      = "GrowingIO-SDK-GrowingCoreKit"
 
   s.description  = <<-DESC
@@ -40,7 +40,7 @@ THE SOFTWARE.
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.static_framework = true
   s.preserve_paths = 'GrowingCoreKit/ReleaseNote.txt', 'GrowingCoreKit/VERSION'
-  s.dependency 'Growing', '~> 2.7.7'
+  s.dependency 'Growing', '~> 2.7.8'
   s.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation', 'JavaScriptCore'
   s.libraries = 'icucore', 'sqlite3'
   s.vendored_frameworks = 'GrowingCoreKit/*.framework'
