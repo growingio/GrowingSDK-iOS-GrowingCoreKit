@@ -92,6 +92,14 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 + (void)setAspectMode:(GrowingAspectMode)aspectMode;
 + (GrowingAspectMode)getAspectMode;
 
+// 该函数请在main函数第一行调用
++ (void)setBundleId:(NSString *)bundleId;
++ (NSString *)getBundleId; // 此方法只返回您的赋值
+
+// 该函数请在main函数第一行调用
++ (void)setUrlScheme:(NSString *)urlScheme;
++ (NSString *)getUrlScheme; // 此方法只返回您的赋值
+
 // 是否允许发送基本性能诊断信息，默认为开
 + (void)setEnableDiagnose:(BOOL)enable;
 
