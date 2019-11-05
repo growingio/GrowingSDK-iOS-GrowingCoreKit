@@ -35,14 +35,14 @@ THE SOFTWARE.
   s.platform     = :ios
   s.ios.deployment_target = "7.0"
 
-  s.source       = { :git => 'https://github.com/growingio/GrowingSDK-iOS-GrowingCoreKit.git', :tag => s.version}
+  s.source = { :http => 'https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.8.5.zip' }
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.static_framework = true
-  s.preserve_paths = 'GrowingCoreKit/ReleaseNote.txt', 'GrowingCoreKit/VERSION'
+  s.preserve_paths = 'GrowingIO-iOS-CoreKit/ReleaseNote.txt', 'GrowingIO-iOS-CoreKit/VERSION'
   s.dependency 'Growing', '2.8.5'
   s.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation', 'JavaScriptCore'
   s.libraries = 'icucore', 'sqlite3'
-  s.vendored_frameworks = 'GrowingCoreKit/*.framework'
+  s.vendored_frameworks = 'GrowingIO-iOS-CoreKit/*.framework'
   
 end
