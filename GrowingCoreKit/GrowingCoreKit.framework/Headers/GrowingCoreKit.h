@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 // 如果以上所有函数都未实现 则请实现 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation 方法并调用handleUrl
 + (BOOL)handleUrl:(NSURL*)url;
 
-// 请在applicationDidFinishLaunching中调用此函数初始化
+// 请在applicationDidFinishLaunching中调用此函数初始化,并且在主线程中
 
 // TODO: 要不要把 accountId 改成 projectId？
 // TODO: 这里的任何改动，都需要改 help 文档和集成文档
@@ -75,6 +75,7 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 
 /**
  deeplink广告落地页参数回调设置
+ 调用时机在startWithAccountId函数之前
 
  @param handler deeplink广告落地页参数回调, params 为解析正确时回调的参数, processTime为从app被deeplink唤起到handler回调的时间(单位秒), error 为解析错误时返回的参数.
                  handler 默认为空, 客户需要手动设置.
