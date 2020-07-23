@@ -2,7 +2,7 @@
 
 We are from [GrowingIO.com](http://growingio.com/). We provide professional data analytics service.
 
-This Pod helps our customers to integrate our SDK easily. For more details, please read [help docs on GrowingIO.com](http://help.growingio.com/) (in Chinese).
+This Pod helps our customers to integrate our SDK easily. For more details, please read [help docs on GrowingIO.com](https://docs.growingio.com/v3/developer-manual/sdkintegrated/ios-sdk/) (in Chinese).
 
 To integrate this pod, please add `pod 'GrowingCoreKit'` into your Podfile target(s). Here's an example:
 
