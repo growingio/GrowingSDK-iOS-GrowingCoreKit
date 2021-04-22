@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "GrowingCoreKit"
-  s.version      = "2.8.24"
+  s.version      = "2.9.0"
   s.summary      = "GrowingIO-SDK-GrowingCoreKit"
 
   s.description  = <<-DESC
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://www.growingio.com/"
   s.license = { type: 'MIT', text: <<-LICENSE
-Copyright (c) 2015-2020 GrowingIO <support@growingio.com>
+Copyright (c) 2015-2021 GrowingIO <support@growingio.com>
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -35,12 +35,12 @@ THE SOFTWARE.
   s.platform     = :ios
   s.ios.deployment_target = "8.0"
 
-  s.source = { :http => 'https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.8.24.zip' }
+  s.source = { :http => 'https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.9.0.zip' }
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.static_framework = true
   s.preserve_paths = 'GrowingIO-iOS-CoreKit/ReleaseNote.txt', 'GrowingIO-iOS-CoreKit/VERSION'
-  s.dependency 'Growing', '2.8.24'
+  s.dependency 'Growing', '2.9.0'
   s.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation', 'JavaScriptCore', 'WebKit'
   s.libraries = 'icucore', 'sqlite3'
   s.vendored_frameworks = 'GrowingIO-iOS-CoreKit/*.framework'
