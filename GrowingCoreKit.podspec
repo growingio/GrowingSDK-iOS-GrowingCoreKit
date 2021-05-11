@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "GrowingCoreKit"
-  s.version      = "2.9.0"
+  s.version      = "2.9.1"
   s.summary      = "GrowingIO-SDK-GrowingCoreKit"
 
   s.description  = <<-DESC
@@ -35,7 +35,7 @@ THE SOFTWARE.
   s.platform     = :ios
   s.ios.deployment_target = "8.0"
 
-  s.source = { :http => 'https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.9.0.zip' }
+  s.source = { :http => 'https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.9.1.zip' }
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.static_framework = true
