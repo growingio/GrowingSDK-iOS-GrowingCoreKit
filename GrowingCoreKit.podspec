@@ -40,7 +40,7 @@ THE SOFTWARE.
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.static_framework = true
   s.preserve_paths = 'GrowingIO-iOS-CoreKit/ReleaseNote.txt', 'GrowingIO-iOS-CoreKit/VERSION'
-  s.dependency 'Growing', '2.9.0'
+  s.dependency 'Growing', '2.9.1'
   s.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation', 'JavaScriptCore', 'WebKit'
   s.libraries = 'icucore', 'sqlite3'
   s.vendored_frameworks = 'GrowingIO-iOS-CoreKit/*.framework'
