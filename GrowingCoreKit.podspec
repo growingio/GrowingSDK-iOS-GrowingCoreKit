@@ -2,11 +2,11 @@
 
 Pod::Spec.new do |s|
   s.name         = "GrowingCoreKit"
-  s.version      = "2.9.2"
+  s.version      = "2.9.3"
   s.summary      = "GrowingIO-SDK-GrowingCoreKit"
 
   s.description  = <<-DESC
-                   This Pod contains GrowingIO SDK -- GrowingCoreKit. For more informations, please read http://help.growingio.com/ (in Chinese).
+                   This Pod contains GrowingIO SDK -- GrowingCoreKit. For more informations, please read https://docs.growingio.com/v3/ (in Chinese).
                    DESC
 
   s.homepage     = "https://www.growingio.com/"
@@ -35,12 +35,12 @@ THE SOFTWARE.
   s.platform     = :ios
   s.ios.deployment_target = "8.0"
 
-  s.source = { :http => 'https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.9.2.zip' }
+  s.source = { :http => 'https://assets.growingio.com/sdk/ios/GrowingIO-iOS-CoreKit-2.9.3.zip' }
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.static_framework = true
   s.preserve_paths = 'GrowingIO-iOS-CoreKit/ReleaseNote.txt', 'GrowingIO-iOS-CoreKit/VERSION'
-  s.dependency 'Growing', '2.9.2'
+  s.dependency 'Growing', '2.9.3'
   s.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation', 'JavaScriptCore', 'WebKit'
   s.libraries = 'icucore', 'sqlite3'
   s.vendored_frameworks = 'GrowingIO-iOS-CoreKit/*.framework'
